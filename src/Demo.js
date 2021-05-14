@@ -143,7 +143,7 @@ const Demo = (props) => {
         }
         </div>
       </div>
-      <div className="text-center m-3">
+      <div className="text-center">
         <button className="exit-btn" onClick={() => props.changeView()}>Exit</button>
       </div>
     </div>

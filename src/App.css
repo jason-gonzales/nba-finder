@@ -5,6 +5,7 @@ html,
   background-image: linear-gradient(black,black), url('./ballers-wp.jpg');
   background-blend-mode: saturation;
   background-size:cover;
+  background-repeat: no-repeat;
   min-height: 100%;
 
 
@@ -199,7 +200,7 @@ header {
   padding-left: 70px;
   color: white;
   padding-top: 30px;
-  padding-bottom: 30px
+
 }
 
 a:link {
@@ -220,6 +221,25 @@ a:link {
   }
 }
 
-/* .logout-btn, .exit-btn {
+/* ----------- iPad Pro ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-width: 1024px)
+  and (max-height: 1366px)
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    #root {
+       background-image: linear-gradient(black,black), url('./ballers-wp.jpg');
+  background-blend-mode: saturation;
+      background-size: cover;
+      height: 100vh;
+    }
+}
+
+.exit-btn {
+  margin-top: 240px;
+}
+
+/*
+.logout-btn, .exit-btn {
   margin-top: 200px;
 } */
