@@ -10,7 +10,7 @@ const Home = (props) => {
   // const { isAuthenticated } = useAuth0();
   return (
     // !isAuthenticated && (
-      <div className="home text-center">
+    <div className="home text-center d-flex align-items-center">
         <div className="container">
           <img className="main-logo" src={logo} alt="logo" />
           <h2 className="title">NBA Player Finder</h2>
