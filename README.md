@@ -7,7 +7,7 @@ A front-end React.js project where a user can search for his/her favorite NBA pl
 * HTML5
 * CSS3
 ## Live Demo
-Try the live application at 
+Try the live application at https://heuristic-hypatia-37fc22.netlify.app/
 ## Features
 * User can log in to the application 
 * User can search for an NBA player
