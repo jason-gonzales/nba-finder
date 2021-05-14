@@ -62,8 +62,8 @@ const Cards = (props) => {
               </Card.Body>
             </Card>
           </div>
-          <div className="theback">
-            <div className="text-center card mt-4 m-auto">
+          <div className="theback p-4">
+            <div className="text-center card m-auto">
               <form onSubmit={handleSubmit}>
                 <div className="has-search col-7 m-auto">
                   <span className="fa fa-search form-control-feedback"></span>
