@@ -1,5 +1,56 @@
+body,
+html,
+#root {
+
+  background-image: linear-gradient(black,black), url('./ballers-wp.jpg');
+  background-blend-mode: saturation;
+  background-size:cover;
+  min-height: 100%;
+
+
+}
+
+html {
+  font-size: 18px;
+
+}
+body, .App {
+  min-height: 100%;
+}
+header {
+  padding: .77rem 0;
+  background-color: #1d428a;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  width: 50px;
+  margin-left:10px;
+
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -24,9 +75,97 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*searc list*/
+.search-list {
+  background: white;
+  color: black;
+ /* position: relative; */
 }
+
+.name-list {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.dropdown-list {
+  position: absolute;
+  background: #C9082A;
+  width: 280px;
+  z-index: 10;
+
+}
+/*Card*/
+
+.card {
+  border-radius: 30px !important;
+  box-shadow: 0 0 0 3px #000, 0 0 0 6px yellow, 0 0 0 9px #000;
+  font-family: 'Rubik', sans-serif;
+  width: 300px;
+
+}
+
+
+.card img {
+  border-radius: 30px 30px 0 0;
+  max-height: 230px;
+
+}
+
+.maincontainer {
+  position: relative;
+  width: 360px;
+  height: 410px;
+
+}
+
+ .thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(to bottom, #C9082A 15%, #17408B 15% 30%, white 30% 70%, #17408B 70% 85%, #C9082A 85%);
+}
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: black;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: linear-gradient(to bottom, #C9082A 15%, #17408B 15% 30%, white 30% 70%, #17408B 70% 85%, #C9082A 85%);
+}
+
+.no-record {
+  height: 300px;
+}
+
+.card-title {
+  font-size: 30px !important;
+}
+
+.card-body {
+  background-color: rgb(110, 173, 212);
+  border-radius: 0 0 30px 30px;
+  color: white;
+}
+
+.fa-basketball-ball {
+  font-size: 8px;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +175,51 @@
     transform: rotate(360deg);
   }
 }
+.tv-container {
+  height: 320px;
+}
+.tv {
+  height: 320px;
+  width:390px;
+  margin-left: -18px;
+}
+
+.video {
+  margin-top: -255px;
+  margin-left: -53px;
+  height: 200px;
+}
+.video img {
+  height: 219px;
+  width:245px;
+}
+
+.video-title{
+  padding-right:20px;
+  padding-left: 70px;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px
+}
+
+a:link {
+  text-decoration : none!important;
+}
+
+
+.custom-modal {
+  background-color: white;
+ margin: auto;
+ top: 15%;
+
+}
+
+@media screen and (max-width:375px) {
+  .custom-modal {
+    top:5%;
+  }
+}
+
+/* .logout-btn, .exit-btn {
+  margin-top: 200px;
+} */

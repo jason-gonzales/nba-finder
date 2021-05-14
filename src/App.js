@@ -1,11 +1,34 @@
+import React, { useState } from 'react';
 import './App.css';
+// import LogoutButton from './LogoutButton';
+// import Profile from './Profile';
+// import { useAuth0 } from '@auth0/auth0-react';
+import Home from './Home';
+import Demo from './Demo';
 
-function App() {
+export default function App() {
+
+  const [view, setView] = useState('')
+
+  const changeView = (name) => {
+    setView({ name })
+  }
+
+  // const { isLoading } = useAuth0();
+  // if (isLoading) return <div>Loading...</div>
+
+  let page = null;
+  if (view.name === "demo") {
+    page = <Demo changeView={changeView} />
+  } else {
+    page = <Home changeView={changeView} />
+  }
+
   return (
-    <div className="App">
- <h1>NBA</h1>
-    </div>
-  );
+    <>
+      {page}
+      {/* <Profile />
+      <LogoutButton /> */}
+    </>
+  )
 }
-
-export default App;
