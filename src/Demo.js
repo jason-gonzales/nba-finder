@@ -65,6 +65,7 @@ const Demo = (props) => {
   const fetchYouTube = (name) => {
     axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${name}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}&maxResults=1`)
       .then(async res => {
+        console.log(res)
         setVideo(res.data.items[0])
       }).catch(err => {
         console.log(err)
