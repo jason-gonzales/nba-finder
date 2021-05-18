@@ -18,6 +18,7 @@ html {
 body, .App {
   min-height: 100%;
 }
+
 header {
   padding: .77rem 0;
   background-color: #1d428a;
@@ -236,11 +237,15 @@ a:link {
     }
 }
 
-.exit-btn {
+.theme-btn, .exit-btn {
   margin-top: 240px;
   margin-bottom: 20px;
 }
 
+
+.component {
+  color: white;
+}
 /*
 .logout-btn, .exit-btn {
   margin-top: 200px;

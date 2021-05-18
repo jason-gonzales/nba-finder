@@ -21,7 +21,7 @@
   width: 200px;
 }
 
-.login-btn, .demo-btn,.logout-btn, .exit-btn {
+.login-btn, .demo-btn,.logout-btn, .exit-btn, .theme-btn {
   padding: 9px 15px;
   border: 1px solid red;
   border-radius: 25px;

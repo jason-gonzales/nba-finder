@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import './App.css';
 import Cards from './Cards';
@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import logo from './images/kobe-logo-sq.jpg';
 import tv from './images/nba-tv.png';
 import youtube from './images/youtube-logo.png';
+import ThemeContext from './theme-context';
 
 
 const Demo = (props) => {
@@ -16,6 +17,8 @@ const Demo = (props) => {
   const [dropdown, setDropdown] = useState(false)
   const [video, setVideo] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const themes = useContext(ThemeContext);
 
 
   const handleChange = (e) => {
@@ -79,7 +82,7 @@ const Demo = (props) => {
 
 
     <div>
-      <header>
+      <header style={themes}>
         <div className="d-flex">
           <img src={logo} alt="kobe-logo" className="logo" />
           <form>
@@ -142,10 +145,14 @@ const Demo = (props) => {
             </div>
         }
         </div>
+      </div>    <div className="text-center">
+        <button className="theme-btn" onClick={() => props.changeView()}>Change Theme</button>
       </div>
+
       <div className="text-center">
         <button className="exit-btn" onClick={() => props.changeView()}>Exit</button>
       </div>
+
     </div>
 
   )
