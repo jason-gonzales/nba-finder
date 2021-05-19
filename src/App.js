@@ -5,22 +5,21 @@ import './App.css';
 // import { useAuth0 } from '@auth0/auth0-react';
 import Home from './Home';
 import Demo from './Demo';
-import Layout from './Layout';
 import ThemeContext, {themes} from './theme-context';
 
 export default function App() {
 
   const [view, setView] = useState('')
-  const [theme, setTheme] = useState(themes.dark)
+  const [theme, setTheme] = useState(themes.home)
 
   const changeView = (name) => {
     setView({ name })
   }
 
   const toggleTheme = () =>
-  theme === themes.dark
-  ? setTheme(themes.light)
-   : setTheme(themes.dark);
+  theme === themes.home
+  ? setTheme(themes.away)
+   : setTheme(themes.home);
   // const { isLoading } = useAuth0();
   // if (isLoading) return <div>Loading...</div>
 
@@ -34,15 +33,15 @@ export default function App() {
   } else {
     page = <Home changeView={changeView} />
   }
-
+  console.log(themes.dark)
   return (
     <>
       {page}
       {/* <Profile />
       <LogoutButton /> */}
       <ThemeContext.Provider value={theme}>
-        <button onClick={toggleTheme}>Change Theme</button>
-        <Layout />
+        <button style={themes} className="theme-btn" onClick={toggleTheme}>Change Theme</button>
+
       </ThemeContext.Provider>
 
     </>
