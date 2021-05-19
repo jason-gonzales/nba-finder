@@ -1,16 +1,16 @@
 import React from 'react';
 
 export const themes = {
-  dark: {
-  color: "white",
-    background: "black",
+  home: {
+    color: "black",
+    background: "#1d428a",
   },
-  light: {
-    color : "black",
-    background: "white"
+  away: {
+    color : "white",
+    background: "black"
   }
 };
-
-const ThemeContext = React.createContext(themes.dark)
+console.log(themes.dark)
+const ThemeContext = React.createContext(themes.home)
 
 export default ThemeContext;

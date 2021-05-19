@@ -145,10 +145,10 @@ const Demo = (props) => {
             </div>
         }
         </div>
-      </div>    <div className="text-center">
-        <button className="theme-btn" onClick={() => props.changeView()}>Change Theme</button>
       </div>
-
+      {/* <div className="text-center">
+        <button className="theme-btn" onClick={() => props.changeView()}>Change Theme</button>
+      </div> */}
       <div className="text-center">
         <button className="exit-btn" onClick={() => props.changeView()}>Exit</button>
       </div>
