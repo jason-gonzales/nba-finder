@@ -4,7 +4,7 @@ import './App.css';
 import Cards from './Cards';
 import ReactPlayer from 'react-player';
 import Modal from 'react-modal';
-import logo from './images/kobe-logo-sq.jpg';
+import logo from './images/kobe-logo-mn.png';
 import tv from './images/nba-tv.png';
 import youtube from './images/youtube-logo.png';
 import ThemeContext from './theme-context';
@@ -85,7 +85,7 @@ const Demo = (props) => {
       <header style={themes}>
         <div className="d-flex">
           <img src={logo} alt="kobe-logo" className="logo" />
-          <form>
+          <form className="mt-2">
             <div className="has-search">
               <span className="fa fa-search form-control-feedback"></span>
               <input type="text"
@@ -93,7 +93,7 @@ const Demo = (props) => {
                 placeholder="Search Player"
                 onChange={handleChange} />
               {dropdown && search?.length > 0 &&
-                <div className="dropdown-list p-2">
+                <div style={themes} className="dropdown-list p-2">
                   {search?.map((el, i) =>
                     <div key={i} className="fa fa-search d-flex p-1">
                       <div className="ml-1 name-list" onClick={handleClick} value={el.first_name}>
@@ -146,11 +146,9 @@ const Demo = (props) => {
         }
         </div>
       </div>
-      {/* <div className="text-center">
-        <button className="theme-btn" onClick={() => props.changeView()}>Change Theme</button>
-      </div> */}
+
       <div className="text-center">
-        <button className="exit-btn" onClick={() => props.changeView()}>Exit</button>
+        <button style={themes} className="exit-btn" onClick={() => props.changeView()}>Exit</button>
       </div>
 
     </div>

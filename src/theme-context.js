@@ -2,7 +2,7 @@ import React from 'react';
 
 export const themes = {
   home: {
-    color: "black",
+    color: "white",
     background: "#1d428a",
   },
   away: {
@@ -10,7 +10,6 @@ export const themes = {
     background: "black"
   }
 };
-console.log(themes.dark)
 const ThemeContext = React.createContext(themes.home)
 
 export default ThemeContext;
