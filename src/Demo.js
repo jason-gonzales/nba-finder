@@ -7,8 +7,7 @@ import Modal from 'react-modal';
 import logo from './images/kobe-logo-mn.png';
 import tv from './images/nba-tv.png';
 import youtube from './images/youtube-logo.png';
-import ThemeContext from './theme-context';
-
+import ThemeContext, {themes} from './theme-context';
 
 const Demo = (props) => {
   const [dataPlayer, setDataPlayer] = useState([]);
@@ -19,8 +18,12 @@ const Demo = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const themes = useContext(ThemeContext);
+  const [theme, setTheme] = useState(themes.home)
 
-
+  const toggleTheme = () =>
+  theme === themes.home
+  ? setTheme(themes.away)
+   : setTheme(themes.home);
   const handleChange = (e) => {
 
     const { value } = e.target
@@ -150,7 +153,10 @@ const Demo = (props) => {
       <div className="text-center">
         <button style={themes} className="exit-btn" onClick={() => props.changeView()}>Exit</button>
       </div>
+  <ThemeContext.Provider value={theme}>
+        <button style={themes} className="theme-btn" onClick={toggleTheme}>Change Theme</button>
 
+      </ThemeContext.Provider>
     </div>
 
   )
